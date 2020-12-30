@@ -1,0 +1,5 @@
+11:53 12/30/2020
+
+vscode first? git first? i don't know.
+
+choco install 7zip vcredist-all googlechrome git TortoiseGit vscode  -y
