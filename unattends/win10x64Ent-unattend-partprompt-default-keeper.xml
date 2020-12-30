@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Preset xmlns="urn:schemas-nliteos-com:pn.v1">
+	<Date>12/26/2020 13:46:29</Date>
+	<AppInfo>
+		<Version>2.0.0.7742</Version>
+		<Licensed>No</Licensed>
+		<Protections>Yes</Protections>
+		<Host>Windows 10 Pro (1909) x64 - Client 10.0.18363.1256 (en-US)</Host>
+	</AppInfo>
+	<ImageInfo>
+		<Version mode="offline">Windows 10 Pro (2009) x64 - Client 10.0.19042.685 (en-US)</Version>
+		<GUID>{706B3987-13F0-4BB5-BECA-B11F7EA18292}</GUID>
+	</ImageInfo>
+	<RemoveComponents></RemoveComponents>
+	<Compatibility protectHidden="false">
+		<ComponentFeatures>
+			<Feature enabled="yes">FileSharing</Feature>
+			<Feature enabled="no">Hyper-V</Feature>
+			<Feature enabled="yes">ManualSetup</Feature>
+			<Feature enabled="yes">OfficeSupport</Feature>
+			<Feature enabled="yes">Netflix</Feature>
+			<Feature enabled="no">NetworkDiscovery</Feature>
+			<Feature enabled="yes">NvidiaSetup</Feature>
+			<Feature enabled="yes">OOBE</Feature>
+			<Feature enabled="yes">Printing</Feature>
+			<Feature enabled="yes">Recommended-All</Feature>
+			<Feature enabled="no">SamsungSwitch</Feature>
+			<Feature enabled="yes">ServicingStack</Feature>
+			<Feature enabled="yes">ShellSearchSupport</Feature>
+			<Feature enabled="yes">Spotify</Feature>
+			<Feature enabled="yes">DefaultFonts</Feature>
+			<Feature enabled="no">SafeMode</Feature>
+			<Feature enabled="no">Recommended-Tablet</Feature>
+			<Feature enabled="yes">USBModem</Feature>
+			<Feature enabled="yes">USB</Feature>
+			<Feature enabled="yes">VideoPlayback</Feature>
+			<Feature enabled="no">VPN</Feature>
+			<Feature enabled="no">VisualStudio</Feature>
+			<Feature enabled="yes">ActivationKMS</Feature>
+			<Feature enabled="yes">Activation</Feature>
+			<Feature enabled="yes">AppxSupport</Feature>
+			<Feature enabled="yes">WindowsUpdate</Feature>
+			<Feature enabled="yes">WLAN</Feature>
+		</ComponentFeatures>
+		<MachineDrivers>
+			<Machine enabled="yes">HostMachine</Machine>
+			<Machine enabled="no">Hyper-V VM</Machine>
+			<Machine enabled="no">Parallels VM</Machine>
+			<Machine enabled="no">Virtual Box VM</Machine>
+			<Machine enabled="no">VMware VM</Machine>
+		</MachineDrivers>
+	</Compatibility>
+	<Features></Features>
+	<AddPackages></AddPackages>
+	<Drivers showHidden="false">
+		<AddDrivers></AddDrivers>
+	</Drivers>
+	<Unattended mode="1">
+		<OEMSetupComplete>false</OEMSetupComplete>
+		<AnswerFileLocationPanther>false</AnswerFileLocationPanther>
+		<AnswerFileLocationBoot>false</AnswerFileLocationBoot>
+		<SaveBothArch>false</SaveBothArch>
+		<settings pass="oobeSystem">
+			<component name="Microsoft-Windows-International-Core">
+				<SystemLocale>en-US</SystemLocale>
+				<UILanguage>en-US</UILanguage>
+				<UILanguageFallback>en-US</UILanguageFallback>
+				<UserLocale>en-US</UserLocale>
+			</component>
+			<component name="Microsoft-Windows-Shell-Setup">
+				<TimeZone>Pacific Standard Time</TimeZone>
+				<AutoLogon>
+					<Enabled>true</Enabled>
+					<LogonCount>9999999</LogonCount>
+					<Username>keith</Username>
+					<Password>
+						<PlainText>false</PlainText>
+						<Value>awBlAGkAdABoAGsAZQBpAHQAaABQAGEAcwBzAHcAbwByAGQA</Value>
+					</Password>
+				</AutoLogon>
+				<OOBE>
+					<HideEULAPage>true</HideEULAPage>
+					<HideOnlineAccountScreens>true</HideOnlineAccountScreens>
+					<HideWirelessSetupInOOBE>true</HideWirelessSetupInOOBE>
+					<NetworkLocation>Home</NetworkLocation>
+					<ProtectYourPC>3</ProtectYourPC>
+					<SkipMachineOOBE>true</SkipMachineOOBE>
+					<SkipUserOOBE>true</SkipUserOOBE>
+				</OOBE>
+				<UserAccounts>
+					<LocalAccounts>
+						<LocalAccount>
+							<DisplayName>keith</DisplayName>
+							<Group>Administrators</Group>
+							<Name>keith</Name>
+							<Password>
+								<PlainText>false</PlainText>
+								<Value>awBlAGkAdABoAGsAZQBpAHQAaABQAGEAcwBzAHcAbwByAGQA</Value>
+							</Password>
+						</LocalAccount>
+					</LocalAccounts>
+				</UserAccounts>
+			</component>
+		</settings>
+		<settings pass="windowsPE">
+			<component name="Microsoft-Windows-International-Core-WinPE">
+				<InputLocale>007f:00140c00</InputLocale>
+				<UILanguage>en-US</UILanguage>
+				<UILanguageFallback>en-US</UILanguageFallback>
+				<SetupUILanguage>
+					<UILanguage>en-US</UILanguage>
+				</SetupUILanguage>
+			</component>
+			<component name="Microsoft-Windows-Setup">
+				<Diagnostics>
+					<OptIn>false</OptIn>
+				</Diagnostics>
+				<DynamicUpdate>
+					<Enable>false</Enable>
+					<WillShowUI>OnError</WillShowUI>
+				</DynamicUpdate>
+				<ImageInstall>
+					<OSImage>
+						<WillShowUI>OnError</WillShowUI>
+						<InstallFrom>
+							<MetaData>
+								<Key>/IMAGE/NAME</Key>
+								<Value>Windows 10 Enterprise</Value>
+							</MetaData>
+						</InstallFrom>
+					</OSImage>
+				</ImageInstall>
+				<UserData>
+					<AcceptEula>true</AcceptEula>
+				</UserData>
+			</component>
+		</settings>
+	</Unattended>
+	<Tweaks>
+		<Settings></Settings>
+		<Services></Services>
+		<ExtraServices></ExtraServices>
+	</Tweaks>
+	<ApplyOptions>
+		<ImageTasks>
+			<Task>imageSaveRebuild</Task>
+			<Task>imageFormatWim</Task>
+			<Task>imageOptionsCreateIso</Task>
+		</ImageTasks>
+		<AutoIsoFile>P:\VirtualBox VMs\Win10 x64 20h2\win10-20h2-x64-ent [debug edit].iso</AutoIsoFile>
+		<AutoIsoLabel>win10-20h2-x64-ent [debug edit]</AutoIsoLabel>
+		<AutoSplitSize>4000</AutoSplitSize>
+		<CleanHotfixedLeftovers>0</CleanHotfixedLeftovers>
+		<ReuseDriverCache>false</ReuseDriverCache>
+	</ApplyOptions>
+	<Execution>
+		<Remove></Remove>
+		<Change>
+			<Item type="Command">
+				<Path>powershell</Path>
+				<PathOriginal>powershell</PathOriginal>
+				<Params>Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))</Params>
+				<ParamsOriginal>Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))</ParamsOriginal>
+				<Index>1</Index>
+				<IndexOriginal>0</IndexOriginal>
+			</Item>
+		</Change>
+		<Add>
+			<Item type="Placeholder">
+				<Index>0</Index>
+			</Item>
+			<Item type="Command">
+				<Path>choco</Path>
+				<Params>install 7zip vcredist-all googlechrome vscode git TortoiseGit -y</Params>
+				<Index>2</Index>
+			</Item>
+		</Add>
+	</Execution>
+	<Registry></Registry>
+</Preset>

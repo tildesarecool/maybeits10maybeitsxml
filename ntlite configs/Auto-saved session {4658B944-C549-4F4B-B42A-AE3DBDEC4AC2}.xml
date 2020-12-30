@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Preset isAutoSaved="true" xmlns="urn:schemas-nliteos-com:pn.v1">
+	<Date>12/22/2020 13:15:52</Date>
+	<AppInfo>
+		<Version>2.0.0.7742</Version>
+		<Licensed>No</Licensed>
+		<Protections>Yes</Protections>
+		<Host>Windows 10 Pro (1909) x64 - Client 10.0.18363.1256 (en-US)</Host>
+	</AppInfo>
+	<ImageInfo>
+		<Version mode="offline">Windows 10 Pro (2009) x64 - Client 10.0.19042.631 (en-US)</Version>
+		<GUID>{4658B944-C549-4F4B-B42A-AE3DBDEC4AC2}</GUID>
+	</ImageInfo>
+	<RemoveComponents>
+		<c>branchcacheclient 'BranchCache Client'</c>
+		<c>langarabic 'Arabic'</c>
+		<c>langbulgarian 'Bulgarian'</c>
+		<c>langchineses 'Chinese Simplified'</c>
+		<c>langchineset 'Chinese Traditional'</c>
+		<c>langcroatian 'Croatian'</c>
+		<c>langczech 'Czech'</c>
+		<c>langdanish 'Danish'</c>
+		<c>langdutch 'Dutch'</c>
+		<c>langenglishgb 'English (GB)'</c>
+		<c>langestonian 'Estonian'</c>
+		<c>langfinnish 'Finnish'</c>
+		<c>langfrench 'French'</c>
+		<c>langfrenchcanadian 'French (Canadian)'</c>
+		<c>langgerman 'German'</c>
+		<c>langgreek 'Greek'</c>
+		<c>langhebrew 'Hebrew'</c>
+		<c>langhungarian 'Hungarian'</c>
+		<c>langime 'Input Method Editor (IME)'</c>
+		<c>langimejp 'Japanese (IME)'</c>
+		<c>langimeko 'Korean (IME)'</c>
+		<c>langimetc 'Chinese Traditional (IME)'</c>
+		<c>langitalian 'Italian'</c>
+		<c>langjapanese 'Japanese'</c>
+		<c>langkorean 'Korean'</c>
+		<c>langlatvian 'Latvian'</c>
+		<c>langlithuanian 'Lithuanian'</c>
+		<c>langnorwegian 'Norwegian'</c>
+		<c>langpolish 'Polish'</c>
+		<c>langportuguesebr 'Portuguese (Brazilian)'</c>
+		<c>langportuguesept 'Portuguese'</c>
+		<c>langromanian 'Romanian'</c>
+		<c>langrussian 'Russian'</c>
+		<c>langserbian 'Serbian'</c>
+		<c>langslovak 'Slovak'</c>
+		<c>langslovenian 'Slovenian'</c>
+		<c>langspanish 'Spanish'</c>
+		<c>langswedish 'Swedish'</c>
+		<c>langthai 'Thai'</c>
+		<c>langturkish 'Turkish'</c>
+		<c>langukrainian 'Ukrainian'</c>
+		<c>Microsoft.549981C3F5F10 'Cortana'</c>
+		<c>Microsoft.Advertising.Xaml 'Advertising.Xaml'</c>
+		<c>Microsoft.BingWeather 'BingWeather'</c>
+		<c>Microsoft.GetHelp 'GetHelp'</c>
+		<c>Microsoft.Getstarted 'Tips (Get Started)'</c>
+		<c>Microsoft.MicrosoftOfficeHub 'OfficeHub'</c>
+		<c>Microsoft.MicrosoftSolitaireCollection 'SolitaireCollection'</c>
+		<c>Microsoft.MicrosoftStickyNotes 'StickyNotes'</c>
+		<c>Microsoft.MixedReality.Portal 'MixedReality.Portal'</c>
+		<c>Microsoft.Office.OneNote 'Office.OneNote'</c>
+		<c>Microsoft.People 'People'</c>
+		<c>Microsoft.SkypeApp 'SkypeApp'</c>
+		<c>Microsoft.Wallet 'Wallet Service'</c>
+		<c>Microsoft.Windows.NarratorQuickStart 'NarratorQuickStart'</c>
+		<c>Microsoft.Windows.ParentalControls 'ParentalControls'</c>
+		<c>Microsoft.Windows.PeopleExperienceHost 'PeopleExperienceHost'</c>
+		<c>Microsoft.WindowsAlarms 'Alarms'</c>
+		<c>microsoft.windowscommunicationsapps 'Windows Mail'</c>
+		<c>Microsoft.WindowsFeedbackHub 'FeedbackHub'</c>
+		<c>Microsoft.WindowsMaps 'Maps'</c>
+		<c>Microsoft.YourPhone 'YourPhone'</c>
+		<c>Microsoft.ZuneMusic 'ZuneMusic'</c>
+		<c>Microsoft.ZuneVideo 'ZuneVideo'</c>
+		<c>remoteassistance 'Remote Assistance'</c>
+		<c>winsat 'Windows System Assessment Tool (WinSAT)'</c>
+	</RemoveComponents>
+	<Compatibility protectHidden="false">
+		<ComponentFeatures>
+			<Feature enabled="yes">FileSharing</Feature>
+			<Feature enabled="no">Hyper-V</Feature>
+			<Feature enabled="yes">ManualSetup</Feature>
+			<Feature enabled="yes">OfficeSupport</Feature>
+			<Feature enabled="yes">Netflix</Feature>
+			<Feature enabled="no">NetworkDiscovery</Feature>
+			<Feature enabled="yes">NvidiaSetup</Feature>
+			<Feature enabled="yes">OOBE</Feature>
+			<Feature enabled="yes">Printing</Feature>
+			<Feature enabled="yes">Recommended-All</Feature>
+			<Feature enabled="no">SamsungSwitch</Feature>
+			<Feature enabled="yes">ServicingStack</Feature>
+			<Feature enabled="yes">ShellSearchSupport</Feature>
+			<Feature enabled="yes">Spotify</Feature>
+			<Feature enabled="yes">DefaultFonts</Feature>
+			<Feature enabled="no">SafeMode</Feature>
+			<Feature enabled="no">Recommended-Tablet</Feature>
+			<Feature enabled="yes">USBModem</Feature>
+			<Feature enabled="yes">USB</Feature>
+			<Feature enabled="yes">VideoPlayback</Feature>
+			<Feature enabled="no">VPN</Feature>
+			<Feature enabled="no">VisualStudio</Feature>
+			<Feature enabled="yes">ActivationKMS</Feature>
+			<Feature enabled="yes">Activation</Feature>
+			<Feature enabled="yes">AppxSupport</Feature>
+			<Feature enabled="yes">WindowsUpdate</Feature>
+			<Feature enabled="yes">WLAN</Feature>
+		</ComponentFeatures>
+		<MachineDrivers>
+			<Machine enabled="yes">HostMachine</Machine>
+			<Machine enabled="no">Hyper-V VM</Machine>
+			<Machine enabled="no">Parallels VM</Machine>
+			<Machine enabled="no">Virtual Box VM</Machine>
+			<Machine enabled="no">VMware VM</Machine>
+		</MachineDrivers>
+	</Compatibility>
+	<Features></Features>
+	<AddPackages></AddPackages>
+	<Drivers showHidden="false">
+		<AddDrivers></AddDrivers>
+	</Drivers>
+	<Unattended mode="0">
+		<OEMSetupComplete>false</OEMSetupComplete>
+		<AnswerFileLocationPanther>false</AnswerFileLocationPanther>
+		<AnswerFileLocationBoot>false</AnswerFileLocationBoot>
+		<SaveBothArch>false</SaveBothArch>
+		<settings pass="windowsPE">
+			<component name="Microsoft-Windows-Setup">
+				<DynamicUpdate>
+					<WillShowUI>OnError</WillShowUI>
+				</DynamicUpdate>
+				<ImageInstall>
+					<OSImage>
+						<WillShowUI>OnError</WillShowUI>
+						<InstallFrom>
+							<MetaData>
+								<Key>/IMAGE/NAME</Key>
+								<Value>Windows 10 Enterprise</Value>
+							</MetaData>
+						</InstallFrom>
+					</OSImage>
+				</ImageInstall>
+			</component>
+		</settings>
+	</Unattended>
+	<Tweaks>
+		<Settings></Settings>
+		<Services></Services>
+		<ExtraServices></ExtraServices>
+	</Tweaks>
+	<ApplyOptions>
+		<ImageTasks>
+			<Task>imageSaveTrim</Task>
+			<Task>imageFormatWim</Task>
+		</ImageTasks>
+		<AutoIsoFile>NTLite.iso</AutoIsoFile>
+		<AutoIsoLabel>NTLite</AutoIsoLabel>
+		<AutoSplitSize>4000</AutoSplitSize>
+		<CleanHotfixedLeftovers>0</CleanHotfixedLeftovers>
+		<ReuseDriverCache>false</ReuseDriverCache>
+	</ApplyOptions>
+	<Execution>
+		<Remove></Remove>
+		<Change></Change>
+		<Add>
+			<Item type="Placeholder">
+				<Index>0</Index>
+			</Item>
+		</Add>
+	</Execution>
+	<Registry></Registry>
+</Preset>

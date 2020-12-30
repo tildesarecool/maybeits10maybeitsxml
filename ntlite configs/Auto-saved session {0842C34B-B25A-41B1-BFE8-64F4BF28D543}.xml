@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Preset isAutoSaved="true" xmlns="urn:schemas-nliteos-com:pn.v1">
+	<Date>12/22/2020 14:49:48</Date>
+	<AppInfo>
+		<Version>2.0.0.7742</Version>
+		<Licensed>No</Licensed>
+		<Protections>Yes</Protections>
+		<Host>Windows 10 Pro (1909) x64 - Client 10.0.18363.1256 (en-US)</Host>
+	</AppInfo>
+	<ImageInfo>
+		<Version mode="offline">Windows 10 Pro (2009) x64 - Client 10.0.19042.631 (en-US)</Version>
+		<GUID>{0842C34B-B25A-41B1-BFE8-64F4BF28D543}</GUID>
+	</ImageInfo>
+	<RemoveComponents>
+		<c>datacenterbridging 'Data Center Bridging (DCB)'</c>
+		<c>enterpriseclientsync 'Work Folders Client'</c>
+		<c>iis 'Internet Information Server (IIS)'</c>
+		<c>kerneldebug 'Kernel Debugging'</c>
+		<c>manifestbackup 'Manifest Backup (WinSxS\Backup)'</c>
+		<c>textprediction 'Text prediction'</c>
+	</RemoveComponents>
+	<Compatibility protectHidden="false">
+		<ComponentFeatures>
+			<Feature enabled="yes">FileSharing</Feature>
+			<Feature enabled="no">Hyper-V</Feature>
+			<Feature enabled="yes">ManualSetup</Feature>
+			<Feature enabled="yes">OfficeSupport</Feature>
+			<Feature enabled="yes">Netflix</Feature>
+			<Feature enabled="no">NetworkDiscovery</Feature>
+			<Feature enabled="yes">NvidiaSetup</Feature>
+			<Feature enabled="yes">OOBE</Feature>
+			<Feature enabled="yes">Printing</Feature>
+			<Feature enabled="yes">Recommended-All</Feature>
+			<Feature enabled="no">SamsungSwitch</Feature>
+			<Feature enabled="yes">ServicingStack</Feature>
+			<Feature enabled="yes">ShellSearchSupport</Feature>
+			<Feature enabled="yes">Spotify</Feature>
+			<Feature enabled="yes">DefaultFonts</Feature>
+			<Feature enabled="no">SafeMode</Feature>
+			<Feature enabled="no">Recommended-Tablet</Feature>
+			<Feature enabled="yes">USBModem</Feature>
+			<Feature enabled="yes">USB</Feature>
+			<Feature enabled="yes">VideoPlayback</Feature>
+			<Feature enabled="no">VPN</Feature>
+			<Feature enabled="no">VisualStudio</Feature>
+			<Feature enabled="yes">ActivationKMS</Feature>
+			<Feature enabled="yes">Activation</Feature>
+			<Feature enabled="yes">AppxSupport</Feature>
+			<Feature enabled="yes">WindowsUpdate</Feature>
+			<Feature enabled="yes">WLAN</Feature>
+		</ComponentFeatures>
+		<MachineDrivers>
+			<Machine enabled="yes">HostMachine</Machine>
+			<Machine enabled="no">Hyper-V VM</Machine>
+			<Machine enabled="no">Parallels VM</Machine>
+			<Machine enabled="no">Virtual Box VM</Machine>
+			<Machine enabled="no">VMware VM</Machine>
+		</MachineDrivers>
+	</Compatibility>
+	<Features>
+		<Feature name="NFS-Administration">true</Feature>
+		<Feature name="ClientForNFS-Infrastructure">true</Feature>
+		<Feature name="ServicesForNFS-ClientOnly">true</Feature>
+		<Feature name="SimpleTCP">true</Feature>
+		<Feature name="TelnetClient">true</Feature>
+		<Feature name="TFTP">true</Feature>
+		<Feature name="Microsoft-Windows-Subsystem-Linux">true</Feature>
+	</Features>
+	<AddPackages></AddPackages>
+	<Drivers showHidden="false">
+		<AddDrivers></AddDrivers>
+	</Drivers>
+	<Unattended mode="0">
+		<OEMSetupComplete>false</OEMSetupComplete>
+		<AnswerFileLocationPanther>false</AnswerFileLocationPanther>
+		<AnswerFileLocationBoot>false</AnswerFileLocationBoot>
+		<SaveBothArch>false</SaveBothArch>
+		<settings pass="windowsPE">
+			<component name="Microsoft-Windows-Setup">
+				<DynamicUpdate>
+					<WillShowUI>OnError</WillShowUI>
+				</DynamicUpdate>
+				<ImageInstall>
+					<OSImage>
+						<WillShowUI>OnError</WillShowUI>
+						<InstallFrom>
+							<MetaData>
+								<Key>/IMAGE/NAME</Key>
+								<Value>Windows 10 Enterprise</Value>
+							</MetaData>
+						</InstallFrom>
+					</OSImage>
+				</ImageInstall>
+			</component>
+		</settings>
+	</Unattended>
+	<Tweaks>
+		<Settings>
+			<TweakGroup name="DesktopTweaks">
+				<Tweak name="Personalize\AppsUseLightTheme">0</Tweak>
+				<Tweak name="Personalize\SystemUsesLightTheme">0</Tweak>
+				<Tweak name="NewStartPanel\{645FF040-5081-101B-9F08-00AA002F954E}">0</Tweak>
+				<Tweak name="ContentDeliveryManager\SoftLandingEnabled">0</Tweak>
+				<Tweak name="Desktop\ScreenSaverIsSecure">0</Tweak>
+				<Tweak name="Search\SearchboxTaskbarMode">0</Tweak>
+				<Tweak name="ContentDeliveryManager\SubscribedContent-310093Enabled">0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Explorer">
+				<Tweak name="OperationStatusManager\EnthusiastMode">1</Tweak>
+				<Tweak name="AutoplayHandlers\DisableAutoplay">1</Tweak>
+				<Tweak name="cmd\HideBasedOnVelocityId">0</Tweak>
+				<Tweak name="ControlPanel\StartupPage">1</Tweak>
+				<Tweak name="Explorer\DisableSearchBoxSuggestions">1</Tweak>
+				<Tweak name="Advanced\ShowSyncProviderNotifications">0</Tweak>
+				<Tweak name="Advanced\ShowTaskViewButton">0</Tweak>
+				<Tweak name="Advanced\HideFileExt">0</Tweak>
+				<Tweak name="Advanced\Hidden">1</Tweak>
+				<Tweak name="Advanced\ShowSuperHidden">1</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Network">
+				<Tweak name="System\LocalAccountTokenFilterPolicy">1</Tweak>
+				<Tweak name="Parameters\DisableBandwidthThrottling">1</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Privacy">
+				<Tweak name="appointments\Value">Deny</Tweak>
+				<Tweak name="phoneCallHistory\Value">Deny</Tweak>
+				<Tweak name="contacts\Value">Deny</Tweak>
+				<Tweak name="appDiagnostics\Value">Deny</Tweak>
+				<Tweak name="email\Value">Deny</Tweak>
+				<Tweak name="chat\Value">Deny</Tweak>
+				<Tweak name="phoneCall\Value">Deny</Tweak>
+				<Tweak name="Client\OptInOrOutPreference">0</Tweak>
+				<Tweak name="System\AllowExperimentation">0</Tweak>
+				<Tweak name="System\AllowLocation">0</Tweak>
+				<Tweak name="DataCollection\AllowTelemetry">0</Tweak>
+				<Tweak name="CloudContent\DisableWindowsConsumerFeatures">1</Tweak>
+				<Tweak name="features\PaidWifi">0</Tweak>
+				<Tweak name="features\WiFiSenseOpen">0</Tweak>
+				<Tweak name="ContentDeliveryManager\SilentInstalledAppsEnabled">0</Tweak>
+				<Tweak name="TrainedDataStore\HarvestContacts">0</Tweak>
+				<Tweak name="InputPersonalization\RestrictImplicitTextCollection">1</Tweak>
+				<Tweak name="InputPersonalization\RestrictImplicitInkCollection">1</Tweak>
+				<Tweak name="Rules\NumberOfSIUFInPeriod">0</Tweak>
+				<Tweak name="AdvertisingInfo\Enabled">0</Tweak>
+				<Tweak name="Privacy\TailoredExperiencesWithDiagnosticDataEnabled">0</Tweak>
+				<Tweak name="AppSettings\Skype-UserConsentAccepted">0</Tweak>
+				<Tweak name="User Profile\HttpAcceptLanguageOptOut">1</Tweak>
+				<Tweak name="System\EnableActivityFeed">0</Tweak>
+				<Tweak name="Advanced\Start_TrackProgs">0</Tweak>
+				<Tweak name="Advanced\Start_TrackDocs">0</Tweak>
+				<Tweak name="ContentDeliveryManager\SystemPaneSuggestionsEnabled">0</Tweak>
+				<Tweak name="InputPersonalization\AllowInputPersonalization">0</Tweak>
+				<Tweak name="Settings\AcceptedPrivacyPolicy">0</Tweak>
+				<Tweak name="ContentDeliveryManager\PreInstalledAppsEnabled">0</Tweak>
+				<Tweak name="ContentDeliveryManager\OemPreInstalledAppsEnabled">0</Tweak>
+				<Tweak name="Search\BingSearchEnabled">0</Tweak>
+				<Tweak name="TIPC\Enabled">0</Tweak>
+				<Tweak name="UserProfileEngagement\ScoobeSystemSettingEnabled">0</Tweak>
+				<Tweak name="AnqpCache\OsuRegistrationStatus">0</Tweak>
+				<Tweak name="FlipAhead\FPEnabled">0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="System">
+				<Tweak name="System\EnableFirstLogonAnimation">0</Tweak>
+				<Tweak name="System\NoConnectedUser">1</Tweak>
+				<Tweak name="OneDrive\DisableFileSyncNGSC">1</Tweak>
+				<Tweak name="Terminal Server\fDenyTSConnections">0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="UAC">
+				<Tweak name="System\ConsentPromptBehaviorAdmin">0</Tweak>
+			</TweakGroup>
+		</Settings>
+		<Services></Services>
+		<ExtraServices></ExtraServices>
+	</Tweaks>
+	<ApplyOptions>
+		<ImageTasks>
+			<Task>imageSaveRebuild</Task>
+			<Task>imageFormatWim</Task>
+		</ImageTasks>
+		<AutoIsoFile>NTLite.iso</AutoIsoFile>
+		<AutoIsoLabel>NTLite</AutoIsoLabel>
+		<AutoSplitSize>4000</AutoSplitSize>
+		<CleanHotfixedLeftovers>0</CleanHotfixedLeftovers>
+		<ReuseDriverCache>false</ReuseDriverCache>
+	</ApplyOptions>
+	<Execution>
+		<Remove></Remove>
+		<Change></Change>
+		<Add>
+			<Item type="Placeholder">
+				<Index>0</Index>
+			</Item>
+		</Add>
+	</Execution>
+	<Registry></Registry>
+</Preset>
