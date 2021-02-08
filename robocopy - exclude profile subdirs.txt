@@ -1,0 +1,22 @@
+
+robocopy C:\Users\[profile] T:\SagerDec2017\profile /r:0 /w:0 /mir /z /log:t:\robolog-profile.txt /mt:12 /eta /save:backup-profile /tee 
+
+/xd 
+
+"C:\Users\[profile]\3D Objects" 
+C:\Users\[profile]\Searches 
+C:\Users\[profile]\AppData\Local\atom 
+"C:\Users\[profile]\AppData\Local\Battle.net" 
+C:\Users\[profile]\AppData\Local\CrashDumps 
+C:\Users\[profile]\AppData\Local\Dropbox 
+C:\Users\[profile]\AppData\Local\Evernote 
+C:\Users\[profile]\AppData\Local\Google 
+C:\Users\[profile]\AppData\Local\lxss 
+C:\Users\[profile]\AppData\Local\Microsoft 
+C:\Users\[profile]\AppData\Local\NVIDIA 
+"C:\Users\[profile]\AppData\Local\NVIDIA Corporation" 
+C:\Users\[profile]\AppData\Local\Microsoft\Windows\INetCache 
+C:\Users\[profile]\Cookies
+C:\Users\[profile]\Cookies C:\Users\[profile]\Recent  
+
+/nocopy /quit
