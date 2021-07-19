@@ -1,0 +1,231 @@
+<!--*************************************************
+Windows 10 Answer File Generator
+Created using Windows AFG found at:
+;http://www.windowsafg.com
+
+Installation Notes
+Location: Home
+Notes: Win 10 answer file v1
+
+in the case of 1903, I believe this will select "pro" editon, just manually counting down from the top it's the 6th one down
+i believe this goes under the "OSImage" tag (per https://superuser.com/questions/715368/how-to-bypass-the-os-edition-selection-page-in-a-windows-unattended-setup)
+and i have to put under both x86 and x64 sections
+
+<InstallFrom>
+<MetaData wcm:action="add">
+<Key>/IMAGE/INDEX</Key>
+<Value>6</Value>
+</MetaData>
+</InstallFrom>
+
+                    <SynchronousCommand wcm:action="add">
+                        <Order>1</Order>
+                        <RequiresUserInput>false</RequiresUserInput>
+                        <CommandLine>powershell pnputil /add-driver d:\VBox-drivers\*.inf /install /subdirs</CommandLine>
+                        <Description>install drivers</Description>
+                    </SynchronousCommand>
+
+
+for using the name in place of the index value I think this will work:
+<InstallFrom>
+<MetaData wcm:action="add">
+<Key>/IMAGE/NAME</Key>
+<Value>Windows 10 Pro</Value>
+</MetaData>
+</InstallFrom>
+
+                    <Disk wcm:action="add">
+                        <CreatePartitions>
+                            <CreatePartition wcm:action="add">
+                                <Order>1</Order>
+                                <Type>Primary</Type>
+                                <Size>100</Size>
+                            </CreatePartition>
+                            <CreatePartition wcm:action="add">
+                                <Extend>true</Extend>
+                                <Order>2</Order>
+                                <Type>Primary</Type>
+                            </CreatePartition>
+                        </CreatePartitions>
+                        <ModifyPartitions>
+                            <ModifyPartition wcm:action="add">
+                                <Active>true</Active>
+                                <Format>NTFS</Format>
+                                <Label>System Reserved</Label>
+                                <Order>1</Order>
+                                <PartitionID>1</PartitionID>
+                                <TypeID>0x27</TypeID>
+                            </ModifyPartition>
+                            <ModifyPartition wcm:action="add">
+                                <Active>true</Active>
+                                <Format>NTFS</Format>
+                                <Label>OS</Label>
+                                <Letter>C</Letter>
+                                <Order>2</Order>
+                                <PartitionID>2</PartitionID>
+                            </ModifyPartition>
+                        </ModifyPartitions>
+                        <DiskID>0</DiskID>
+                        <WillWipeDisk>true</WillWipeDisk>
+                    </Disk>
+**************************************************-->
+<?xml version="1.0" encoding="utf-8"?>
+    <unattend xmlns="urn:schemas-microsoft-com:unattend">
+        <settings pass="windowsPE">
+            <component name="Microsoft-Windows-International-Core-WinPE" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <SetupUILanguage>
+                    <UILanguage>en-US</UILanguage>
+                </SetupUILanguage>
+                <InputLocale>0409:00000409</InputLocale>
+                <SystemLocale>en-US</SystemLocale>
+                <UILanguage>en-US</UILanguage>
+                <UILanguageFallback>en-US</UILanguageFallback>
+                <UserLocale>en-US</UserLocale>
+            </component>
+            <component name="Microsoft-Windows-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <ImageInstall>
+                <OSImage>
+                    <InstallFrom>
+                        <MetaData wcm:action="add">
+                            <Key>/IMAGE/NAME</Key>
+                            <Value>Windows 10 Enterprise</Value>
+                        </MetaData>
+                    </InstallFrom>
+                </OSImage>
+            </ImageInstall>
+                <UserData>
+                    <AcceptEula>true</AcceptEula>
+                    <FullName>Keith</FullName>
+                    <Organization></Organization>
+                    <ProductKey>
+                        <Key></Key>
+                        <WillShowUI>Never</WillShowUI>
+                    </ProductKey>
+                </UserData>
+            </component>
+        </settings>
+        <settings pass="offlineServicing">
+            <component name="Microsoft-Windows-LUA-Settings" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <EnableLUA>false</EnableLUA>
+            </component>
+        </settings>
+        <settings pass="generalize">
+            <component name="Microsoft-Windows-Security-SPP" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <SkipRearm>1</SkipRearm>
+            </component>
+        </settings>
+        <settings pass="specialize">
+            <component name="Microsoft-Windows-International-Core" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <InputLocale>0409:00000409</InputLocale>
+                <SystemLocale>en-US</SystemLocale>
+                <UILanguage>en-US</UILanguage>
+                <UILanguageFallback>en-US</UILanguageFallback>
+                <UserLocale>en-US</UserLocale>
+            </component>
+            <component name="Microsoft-Windows-Security-SPP-UX" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <SkipAutoActivation>true</SkipAutoActivation>
+            </component>
+            <component name="Microsoft-Windows-SQMApi" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <CEIPEnabled>0</CEIPEnabled>
+            </component>
+            <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <ComputerName>Galactica</ComputerName>
+            </component>
+        </settings>
+        <settings pass="oobeSystem">
+            <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <AutoLogon>
+                    <Password>
+                        <Value>keithkeith</Value>
+                        <PlainText>true</PlainText>
+                    </Password>
+                    <Enabled>true</Enabled>
+                    <Username>Keith</Username>
+                </AutoLogon>
+                <OOBE>
+                    <HideEULAPage>true</HideEULAPage>
+                    <HideOEMRegistrationScreen>true</HideOEMRegistrationScreen>
+                    <HideOnlineAccountScreens>true</HideOnlineAccountScreens>
+                    <HideWirelessSetupInOOBE>true</HideWirelessSetupInOOBE>
+                    <NetworkLocation>Home</NetworkLocation>
+                    <SkipUserOOBE>true</SkipUserOOBE>
+                    <SkipMachineOOBE>true</SkipMachineOOBE>
+                    <ProtectYourPC>1</ProtectYourPC>
+                </OOBE>
+                <UserAccounts>
+                    <LocalAccounts>
+                        <LocalAccount wcm:action="add">
+                            <Password>
+                                <Value>keithkeith</Value>
+                                <PlainText>true</PlainText>
+                            </Password>
+                            <Description></Description>
+                            <DisplayName>Keith</DisplayName>
+                            <Group>Administrators</Group>
+                            <Name>Keith</Name>
+                        </LocalAccount>
+                    </LocalAccounts>
+                </UserAccounts>
+                <RegisteredOrganization></RegisteredOrganization>
+                <RegisteredOwner>Keith</RegisteredOwner>
+                <DisableAutoDaylightTimeSet>false</DisableAutoDaylightTimeSet>
+                <FirstLogonCommands>
+            <!--    <SynchronousCommand wcm:action="add">
+                        <Order>1</Order>
+                        <RequiresUserInput>false</RequiresUserInput>
+                        <CommandLine>powershell pnputil /add-driver D:\lenovo-yoga-drivers-backup\*.inf /install /subdirs</CommandLine>
+                        <Description>install drivers</Description>
+                    </SynchronousCommand>                -->
+                    <SynchronousCommand wcm:action="add">
+                        <Order>3</Order>
+                        <RequiresUserInput>false</RequiresUserInput>
+                        <CommandLine>Powershell -command Invoke-WebRequest -Uri "https://chocolatey.org/install.ps1" -OutFile $env:temp\install.ps1</CommandLine>
+                        <Description>download copy of chocolatey install script</Description>
+                    </SynchronousCommand>
+                    <SynchronousCommand wcm:action="add">
+                        <Order>5</Order>
+                        <RequiresUserInput>false</RequiresUserInput>
+                        <CommandLine>powershell -executionpolicy unrestricted -command Unblock-File $env:temp\install.ps1; powershell -command $env:temp\install.ps1</CommandLine>
+                        <Description>Run said script</Description>
+                    </SynchronousCommand>
+                    <SynchronousCommand wcm:action="add">
+                        <Order>7</Order>
+                        <RequiresUserInput>false</RequiresUserInput>
+                        <CommandLine>powershell  "$env:windir\SysWOW64\OneDriveSetup.exe /uninstall"</CommandLine>
+                        <Description>Take out onedrive</Description>
+                    </SynchronousCommand>
+                    <SynchronousCommand wcm:action="add">
+                        <Order>10</Order>
+                        <RequiresUserInput>false</RequiresUserInput>
+                        <CommandLine>cmd /c %ProgramData%\chocolatey\choco.exe install coretemp 7zip microsoft-windows-terminal googlechrome firefox vscode git TortoiseGit powertoys vcredist-all powershell-core  -y</CommandLine>
+                        <Description>install some stuff</Description>
+                    </SynchronousCommand>
+                    <SynchronousCommand wcm:action="add">
+                        <Order>30</Order>
+                        <RequiresUserInput>false</RequiresUserInput>
+                        <CommandLine>powershell netsh advfirewall firewall set rule group="Network Discovery" new enable=Yes</CommandLine>
+                        <Description>hopefully not have to answer network disconvery prompt</Description>
+                    </SynchronousCommand>
+                    <SynchronousCommand wcm:action="add">
+                        <Order>40</Order>
+                        <RequiresUserInput>false</RequiresUserInput>
+                        <CommandLine>powershell powercfg /import d:\highperformance.pow</CommandLine>
+                        <Description>import power scheme high performance</Description>
+                    </SynchronousCommand>
+                    <SynchronousCommand wcm:action="add">
+                        <Order>45</Order>
+                        <RequiresUserInput>false</RequiresUserInput>
+                        <CommandLine>Powershell -command Invoke-WebRequest -Uri "https://someonewhocares.org/hosts/zero/hosts" -OutFile $env:temp\hosts-000; powershell move \Windows\System32\drivers\etc\hosts \Windows\System32\drivers\etc\hosts.original; move $env:temp\hosts-000 \Windows\System32\drivers\etc\hosts</CommandLine>
+                        <Description>hosts file</Description>
+                    </SynchronousCommand>
+                    <SynchronousCommand wcm:action="add">
+                        <Order>99</Order>
+                        <RequiresUserInput>false</RequiresUserInput>
+                        <CommandLine>powershell Dism.exe /online /Import-DefaultAppAssociations:"D:\Alienware-AppAssociations.xml"</CommandLine>
+                        <Description> Lastly: import file associations </Description>
+                    </SynchronousCommand>
+                </FirstLogonCommands>
+                <TimeZone>Pacific Standard Time</TimeZone>
+            </component>
+        </settings>
+    </unattend>
